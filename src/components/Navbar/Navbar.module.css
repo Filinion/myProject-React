@@ -1,0 +1,16 @@
+.nav {
+  grid-area: n;
+  background-color: #4a160d;
+}
+.item {
+  padding-top: 3%;
+  padding-left: 5%;
+  color: aliceblue;
+  font-size: larger;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.item:hover {
+  color: chartreuse;
+  cursor: pointer;
+}
