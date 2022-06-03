@@ -1,3 +1,4 @@
+import { Route } from "react-router-dom";
 import MyPosts from "./MyPosts/MyPosts";
 import classes from "./Profile.module.css";
 
