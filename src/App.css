@@ -7,3 +7,6 @@
   grid-template-columns: 2fr 10fr;
   grid-gap: 2px;
 }
+.app-wrapper-content {
+  grid-area: c;
+}

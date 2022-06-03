@@ -3,7 +3,7 @@ import classes from "./Profile.module.css";
 
 const Profile = () => {
   return (
-    <div className={classes.content}>
+    <div>
       <div>
         <img src="https://image.winudf.com/v2/image/Y29tLnNhbmdhbS5oaXBzdGVyLndhbGxwYXBlcnNfc2NyZWVuc2hvdHNfNF8yMGU5NDk2/screen-4.jpg?fakeurl=1&type=.jpg"></img>
       </div>
