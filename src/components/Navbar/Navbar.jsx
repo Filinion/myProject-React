@@ -11,7 +11,7 @@ const Navbar = () => {
           }
           to="/profile"
         >
-          Profile
+          Профиль
         </NavLink>
       </div>
       <div className={classes.item}>
@@ -21,7 +21,7 @@ const Navbar = () => {
           }
           to="/dialogs"
         >
-          Dialogs
+          Сообщения
         </NavLink>
       </div>
       <div className={classes.item}>
@@ -31,7 +31,7 @@ const Navbar = () => {
           }
           to="/News"
         >
-          News
+          Новости
         </NavLink>
       </div>
       <div className={classes.item}>
@@ -41,7 +41,7 @@ const Navbar = () => {
           }
           to="/Music"
         >
-          Music
+          Музыка
         </NavLink>
       </div>
       <div className={classes.item}>
@@ -51,7 +51,7 @@ const Navbar = () => {
           }
           to="/Setting"
         >
-          Setting
+          Настройки
         </NavLink>
       </div>
     </nav>

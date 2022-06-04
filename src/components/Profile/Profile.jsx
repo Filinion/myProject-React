@@ -1,10 +1,9 @@
-import { Route } from "react-router-dom";
 import MyPosts from "./MyPosts/MyPosts";
 import classes from "./Profile.module.css";
 
 const Profile = () => {
   return (
-    <div>
+    <div className={classes.profile}>
       <div>
         <img src="https://image.winudf.com/v2/image/Y29tLnNhbmdhbS5oaXBzdGVyLndhbGxwYXBlcnNfc2NyZWVuc2hvdHNfNF8yMGU5NDk2/screen-4.jpg?fakeurl=1&type=.jpg"></img>
       </div>
