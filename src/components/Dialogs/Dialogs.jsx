@@ -1,13 +1,22 @@
+import { Link } from "react-router-dom";
 import classes from "./Dialogs.module.css";
 
 const Dialogs = (props) => {
   return (
     <div className={classes.dialogs}>
       <div className={classes.dialogsItems}>
-        <div className={classes.dialog}>Ivan</div>
-        <div className={classes.dialog}>Igor</div>
-        <div className={classes.dialog}>Valera</div>
-        <div className={classes.dialog}>Alisa</div>
+        <div className={classes.dialog}>
+          <Link to="/dialogs/1">Ivan</Link>
+        </div>
+        <div className={classes.dialog}>
+          <Link to="/dialogs/2">Igor</Link>
+        </div>
+        <div className={classes.dialog}>
+          <Link to="/dialogs/3">Valera</Link>
+        </div>
+        <div className={classes.dialog}>
+          <Link to="/dialogs/4">Alisa</Link>
+        </div>
       </div>
       <div className={classes.messages}>
         <div className={classes.message}>Hi</div>

@@ -23,7 +23,7 @@
 }
 
 .item a:hover {
-  color: cadetblue;
+  color: rgb(16, 84, 87);
 }
 
 .item a.activeLink {
