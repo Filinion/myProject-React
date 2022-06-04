@@ -1,6 +1,7 @@
 .nav {
   grid-area: n;
   background-color: #4a160d;
+  padding: 15px;
 }
 .item {
   padding-top: 3%;
@@ -13,4 +14,19 @@
 .item:hover {
   color: chartreuse;
   cursor: pointer;
+}
+
+.item a {
+  color: aqua;
+  text-decoration: none;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+.item a:hover {
+  color: cadetblue;
+}
+
+.item a.activeLink {
+  color: black;
+  text-decoration: underline;
 }
