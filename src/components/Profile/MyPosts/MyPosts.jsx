@@ -3,12 +3,14 @@ import Post from "./Post/Post";
 
 const MyPosts = () => {
   return (
-    <div>
-      My Post
+    <div className={classes.MyPosts}>
+      Мой пост
       <div>
         <textarea></textarea>
-        <button>Add post</button>
-        <button>Remove</button>
+        <br></br>
+        <button>Добавить</button>
+        <br></br>
+        <button>Удалить</button>
       </div>
       <div className={classes.posts}>
         <div>

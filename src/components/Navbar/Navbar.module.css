@@ -28,5 +28,5 @@
 
 .item a.activeLink {
   color: black;
-  text-decoration: underline;
+  font-size: 110%;
 }
