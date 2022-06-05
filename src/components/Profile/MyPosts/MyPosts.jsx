@@ -7,6 +7,10 @@ const MyPosts = () => {
     { id: 2, post: "Это мой первый пост :)", countLikes: 14 },
   ];
 
+  let myPost = myPostData.map((post) => (
+    <Post message={post.post} id={post.id} countLikes={post.countLikes} />
+  ));
+
   return (
     <div className={classes.MyPosts}>
       Мой пост
@@ -18,16 +22,7 @@ const MyPosts = () => {
         <button>Удалить</button>
       </div>
       <div className={classes.posts}>
-        <div>
-          <Post
-            message={myPostData[0].post}
-            countLikes={myPostData[0].countLikes}
-          />
-          <Post
-            message={myPostData[1].post}
-            countLikes={myPostData[1].countLikes}
-          />
-        </div>
+        <div>{myPost}</div>
       </div>
     </div>
   );

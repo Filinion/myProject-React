@@ -1,0 +1,21 @@
+.dialogsItems {
+  padding: 20px;
+}
+
+.items a {
+  color: aqua;
+  text-decoration: none;
+}
+
+.items {
+  padding: 5px;
+}
+
+.items a:hover {
+  color: rgb(16, 84, 87);
+}
+
+a.activeLink {
+  color: black;
+  font-size: 110%;
+}
