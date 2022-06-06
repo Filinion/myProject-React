@@ -6,18 +6,28 @@ import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Setting from "./components/Setting/Setting";
+import { Route, Routes } from "react-router-dom";
 
-import { Link, Route, Routes } from "react-router-dom";
-
-function App() {
+function App(props) {
   return (
     <div className="app-wrapper">
       <Header />
       <Navbar />
       <div className="app-wrapper-content">
         <Routes>
-          <Route path="/Profile/" element={<Profile />} />
-          <Route path="/Dialogs/*" element={<Dialogs />} />
+          <Route
+            path="/Profile/"
+            element={<Profile myPostData={props.myPostData} />}
+          />
+          <Route
+            path="/Dialogs/*"
+            element={
+              <Dialogs
+                messagesData={props.messagesData}
+                dialogsData={props.dialogsData}
+              />
+            }
+          />
           <Route path="/News/" element={<News />} />
           <Route path="/Music/" element={<Music />} />
           <Route path="/Setting/" element={<Setting />} />

@@ -11,10 +11,6 @@
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.item:hover {
-  color: chartreuse;
-  cursor: pointer;
-}
 
 .item a {
   color: aqua;
@@ -24,6 +20,7 @@
 
 .item a:hover {
   color: rgb(16, 84, 87);
+  font-size: 110%;
 }
 
 .item a.activeLink {

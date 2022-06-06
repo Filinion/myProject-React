@@ -1,33 +1,12 @@
+.dialogsItems {
+  padding: 20px;
+}
+
 .dialogs {
   background-color: #557a95;
   display: grid;
   grid-template-columns: 2fr 10fr;
 }
-.dialogsItems {
-  padding: 20px;
-}
-
-.items a {
-  color: aqua;
-  text-decoration: none;
-}
-
-.items {
-  padding: 5px;
-}
-
-.items a:hover {
-  color: rgb(16, 84, 87);
-}
-
-a.activeLink {
-  color: black;
-  font-size: 110%;
-}
-
 .messages {
   padding: 20px;
-}
-.message {
-  padding: 6px;
 }
