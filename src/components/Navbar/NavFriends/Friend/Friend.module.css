@@ -1,0 +1,21 @@
+.friend {
+  text-align: center;
+  margin: 6px;
+}
+
+.friend img {
+  border-radius: 50%;
+}
+
+.textFriend a {
+  text-decoration: none;
+  color: aqua;
+}
+
+.textFriend a:hover {
+  color: rgb(16, 84, 87);
+}
+
+a.activeLink {
+  color: black;
+}

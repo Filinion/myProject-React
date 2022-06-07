@@ -4,7 +4,7 @@
 }
 
 .items {
-  padding: 5px;
+  padding: px;
 }
 
 .items a:hover {
@@ -14,4 +14,17 @@
 a.activeLink {
   color: black;
   font-size: 110%;
+}
+
+.dialogMen {
+  text-align: center;
+  margin-bottom: 15px;
+  border-top: 0;
+  border-left: 0;
+  border-bottom: 2px;
+  border-style: solid;
+}
+
+.dialogMen img {
+  border-radius: 50%;
 }

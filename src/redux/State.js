@@ -8,8 +8,8 @@ let State = {
   DialogsPage: {
     messagesData: [
       { id: 1, messages: "Привет" },
-      { id: 2, messages: "Как дела?" },
-      { id: 3, messages: "Что расскажешь?" },
+      { id: 2, messages: "Привет.Как дела?" },
+      { id: 3, messages: "Норм :) Что расскажешь?" },
       { id: 4, messages: "Отличная погода сегодня" },
     ],
 
@@ -18,6 +18,14 @@ let State = {
       { id: 2, name: "Igor" },
       { id: 3, name: "Valera" },
       { id: 4, name: "Alisa" },
+    ],
+  },
+  Navbar: {
+    navfriends: [
+      { id: 1, name: "Дмитрий" },
+      { id: 2, name: "Елена" },
+      { id: 3, name: "Артём" },
+      { id: 4, name: "Инна" },
     ],
   },
 };
