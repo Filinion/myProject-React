@@ -10,8 +10,10 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   const OnbuttonClick = () => {
+    debugger;
     let text = newPostElement.current.value;
-    alert(text);
+    props.addPost(text);
+    newPostElement.current.value = "";
   };
 
   return (
@@ -21,8 +23,6 @@ const MyPosts = (props) => {
         <textarea ref={newPostElement}></textarea>
         <br></br>
         <button onClick={OnbuttonClick}>Добавить</button>
-        <br></br>
-        <button>Удалить</button>
       </div>
       <div className={classes.posts}>
         <div>{myPost}</div>

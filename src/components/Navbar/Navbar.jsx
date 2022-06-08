@@ -7,9 +7,7 @@ const Navbar = (props) => {
     <nav className={classes.nav}>
       <div className={classes.item}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to="/profile"
         >
           Профиль
@@ -17,9 +15,7 @@ const Navbar = (props) => {
       </div>
       <div className={classes.item}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to="/dialogs"
         >
           Сообщения
@@ -27,9 +23,7 @@ const Navbar = (props) => {
       </div>
       <div className={classes.item}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to="/News"
         >
           Новости
@@ -37,9 +31,7 @@ const Navbar = (props) => {
       </div>
       <div className={classes.item}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to="/Music"
         >
           Музыка
@@ -47,9 +39,7 @@ const Navbar = (props) => {
       </div>
       <div className={classes.item}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to="/Setting"
         >
           Настройки

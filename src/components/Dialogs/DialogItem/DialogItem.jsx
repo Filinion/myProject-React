@@ -13,9 +13,7 @@ const DialogItem = (props) => {
       </div>
       <div className={classes.items}>
         <NavLink
-          className={(navData) =>
-            navData.isActive ? classes.activeLink : false
-          }
+          className={(navData) => (navData.isActive ? classes.activeLink : "")}
           to={to}
         >
           {props.name}
