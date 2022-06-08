@@ -1,18 +1,26 @@
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import React from "react";
 
 const MyPosts = (props) => {
   let myPost = props.myPostData.map((post) => (
     <Post message={post.post} id={post.id} countLikes={post.countLikes} />
   ));
 
+  let newPostElement = React.createRef();
+
+  const OnbuttonClick = () => {
+    let text = newPostElement.current.value;
+    alert(text);
+  };
+
   return (
     <div className={classes.MyPosts}>
       Мой пост
       <div>
-        <textarea></textarea>
+        <textarea ref={newPostElement}></textarea>
         <br></br>
-        <button>Добавить</button>
+        <button onClick={OnbuttonClick}>Добавить</button>
         <br></br>
         <button>Удалить</button>
       </div>

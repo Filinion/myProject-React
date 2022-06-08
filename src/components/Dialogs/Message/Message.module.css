@@ -1,4 +1,5 @@
 .messages {
+  grid-area: m;
   padding: 20px;
 }
 .message {

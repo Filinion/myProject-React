@@ -15,6 +15,12 @@ const Dialogs = (props) => {
     <div className={classes.dialogs}>
       <div className={classes.dialogsItems}>{dialogs}</div>
       <div className={classes.messages}>{messages}</div>
+      <div className={classes.textMessage}>
+        <textarea cols={40} rows={4} placeholder="Введите сообщение"></textarea>
+        <div className={classes.btnMessage}>
+          <button>Отправить</button>
+        </div>
+      </div>
     </div>
   );
 };

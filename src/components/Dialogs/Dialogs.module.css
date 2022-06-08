@@ -6,7 +6,34 @@
   background-color: #557a95;
   display: grid;
   grid-template-columns: 2fr 10fr;
+  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-areas:
+    "d m"
+    "t t"
+    "b b";
 }
 .messages {
   padding: 20px;
+}
+
+.textMessage {
+  grid-area: t;
+  text-align: center;
+}
+
+.textMessage textarea {
+  resize: none;
+  border-radius: 14px;
+}
+
+.btnMessage {
+  grid-area: b;
+  text-align: center;
+}
+
+.btnMessage button {
+  margin-bottom: 0%;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
 }

@@ -23,6 +23,7 @@ a.activeLink {
   border-left: 0;
   border-bottom: 2px;
   border-style: solid;
+  grid-area: d;
 }
 
 .dialogMen img {

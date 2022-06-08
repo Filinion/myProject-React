@@ -20,6 +20,10 @@ function App(props) {
             element={<Profile state={props.state.ProfilePage} />}
           />
           <Route
+            path="/"
+            element={<Profile state={props.state.ProfilePage} />}
+          />
+          <Route
             path="/Dialogs/*"
             element={<Dialogs state={props.state.DialogsPage} />}
           />
