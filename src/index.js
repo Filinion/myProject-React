@@ -1,14 +1,10 @@
-import State, { subscribe } from "././redux/State";
+import store from "./redux/State";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-import { addPost } from "./redux/State";
-import { changeNewPost } from "./redux/State";
-import { addMessage } from "./redux/State";
-import { changeMessage } from "./redux/State";
 import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 let root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -16,15 +12,15 @@ const rerenderEntireTree = (state) => {
   root.render(
     <BrowserRouter>
       <App
-        state={State}
-        addPost={addPost}
-        changeNewPost={changeNewPost}
-        addMessage={addMessage}
-        changeMessage={changeMessage}
+        state={state}
+        addPost={store.addPost.bind(store)}
+        changeNewPost={store.changeNewPost.bind(store)}
+        addMessage={store.addMessage.bind(store)}
+        changeMessage={store.changeMessage.bind(store)}
       />
     </BrowserRouter>
   );
 };
-rerenderEntireTree();
+rerenderEntireTree(store.getState());
 reportWebVitals();
-subscribe(rerenderEntireTree);
+store.subscribe(rerenderEntireTree);
