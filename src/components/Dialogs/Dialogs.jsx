@@ -15,12 +15,12 @@ const Dialogs = (props) => {
   });
 
   let clickSendMessage = () => {
-    props.addMessage();
+    props.dispatch({ type: "ADD-MESSAGE" });
   };
 
   let changeSendMessage = () => {
     let text = sendMessage.current.value;
-    props.changeMessage(text);
+    props.dispatch({ type: "CHANGE-MESSAGE", text: text });
   };
 
   return (

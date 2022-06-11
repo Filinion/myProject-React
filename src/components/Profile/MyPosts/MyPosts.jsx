@@ -10,15 +10,12 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   const OnbuttonClick = () => {
-    props.addPost(); // Функция создания обектра с ввенным значением
-    // props.changeNewPost(""); // Зануляем значение
-
-    // newPostElement.current.value = ""; // Сбрасываем значение текст ареа на 0 посе ввода
+    props.dispatch({ type: "ADD-POST" });
   };
 
   let onPostChange = () => {
     let post = newPostElement.current.value; // Берем значения по ссылке из текст ареа
-    props.changeNewPost(post); // Функция добавления поста в State.ProfilePage.newPostChange(Виртуально, пока что)
+    props.dispatch({ type: "CHANGE-NEW-POST", newsPost: post }); // Функция добавления поста в State.ProfilePage.newPostChange(Виртуально, пока что)
   };
 
   return (
