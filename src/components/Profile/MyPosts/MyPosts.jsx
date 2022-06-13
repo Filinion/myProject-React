@@ -1,6 +1,10 @@
 import classes from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import React from "react";
+import {
+  addPostActionCreator,
+  changeNewPostCreator,
+} from "./../../../redux/State";
 
 const MyPosts = (props) => {
   let myPost = props.myPostData.map((post) => (
@@ -10,12 +14,12 @@ const MyPosts = (props) => {
   let newPostElement = React.createRef();
 
   const OnbuttonClick = () => {
-    props.dispatch({ type: "ADD-POST" });
+    props.dispatch(addPostActionCreator());
   };
 
   let onPostChange = () => {
     let post = newPostElement.current.value; // Берем значения по ссылке из текст ареа
-    props.dispatch({ type: "CHANGE-NEW-POST", newsPost: post }); // Функция добавления поста в State.ProfilePage.newPostChange(Виртуально, пока что)
+    props.dispatch(changeNewPostCreator(post)); // Функция добавления поста в State.ProfilePage.newPostChange(Виртуально, пока что)
   };
 
   return (
