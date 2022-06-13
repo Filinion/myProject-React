@@ -9,8 +9,6 @@ const Dialogs = (props) => {
     <DialogItem name={dialog.name} id={dialog.id} />
   ));
 
-  let sendMessage = React.createRef();
-
   let messages = props.state.messagesData.map((el) => {
     return <Message message={el.messages} id={el.id} />;
   });
@@ -19,8 +17,8 @@ const Dialogs = (props) => {
     props.dispatch(addMessageCreator());
   };
 
-  let changeSendMessage = () => {
-    let text = sendMessage.current.value;
+  let changeSendMessage = (e) => {
+    let text = e.target.value;
     props.dispatch(changeMessageCreator(text));
   };
 
@@ -30,7 +28,6 @@ const Dialogs = (props) => {
       <div className={classes.messages}>{messages}</div>
       <div className={classes.textMessage}>
         <textarea
-          ref={sendMessage}
           onChange={changeSendMessage}
           value={props.state.NewMessage}
           cols={40}

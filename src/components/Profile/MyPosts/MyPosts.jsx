@@ -11,14 +11,12 @@ const MyPosts = (props) => {
     <Post message={post.post} id={post.id} countLikes={post.countLikes} />
   ));
 
-  let newPostElement = React.createRef();
-
   const OnbuttonClick = () => {
     props.dispatch(addPostActionCreator());
   };
 
-  let onPostChange = () => {
-    let post = newPostElement.current.value; // Берем значения по ссылке из текст ареа
+  let onPostChange = (e) => {
+    let post = e.target.value; // Берем значения по ссылке из текст ареа
     props.dispatch(changeNewPostCreator(post)); // Функция добавления поста в State.ProfilePage.newPostChange(Виртуально, пока что)
   };
 
@@ -27,7 +25,6 @@ const MyPosts = (props) => {
       Мой пост
       <div>
         <textarea
-          ref={newPostElement}
           onChange={onPostChange}
           // {/*  onChange Добавляет каждый введенный элемент с клавы} */}
           value={props.newPostChange}
