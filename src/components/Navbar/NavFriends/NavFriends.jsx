@@ -1,5 +1,6 @@
 import classes from "./NavFriends.module.css";
 import Friend from "./Friend/Friend";
+import React from 'react'
 
 const NavFriends = (props) => {
   let friend = props.myfriends.map((el) => (

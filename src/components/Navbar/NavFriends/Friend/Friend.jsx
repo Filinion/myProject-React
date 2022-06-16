@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import classes from "./Friend.module.css";
+import React from 'react'
 
 const Friend = (props) => {
   let to = "/friend/" + props.id;
