@@ -10,7 +10,7 @@ const MyPosts = (props) => {
   let myPost = props.myPostData.map((post) => (
     <Post message={post.post} id={post.id} countLikes={post.countLikes} />
   ));
-
+ let a
   const OnbuttonClick = () => {
     props.dispatch(addPostActionCreator());
   };
