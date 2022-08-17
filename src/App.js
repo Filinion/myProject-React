@@ -13,15 +13,13 @@ function App(props) {
   return (
     <div className="app-wrapper">
       <Header />
-      <Navbar state={props.state.Navbar} />
+      <Navbar />
       <div className="app-wrapper-content">
         <Routes>
           <Route
             path="/Profile/"
             element={
               <Profile
-                state={props.state.ProfilePage}
-                dispatch={props.dispatch}
               />
             }
           />
@@ -29,8 +27,6 @@ function App(props) {
             path="/Dialogs/*"
             element={
               <Dialogs
-                state={props.state.DialogsPage}
-                dispatch={props.dispatch}
               />
             }
           />

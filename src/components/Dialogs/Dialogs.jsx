@@ -8,9 +8,6 @@ import {
 } from "./../../redux/dialogsReducer";
 
 const Dialogs = (props) => {
-  let dialogs = props.state.dialogsData.map((dialog) => (
-    <DialogItem name={dialog.name} id={dialog.id} />
-  ));
 
   let messages = props.state.messagesData.map((el) => {
     return <Message message={el.messages} id={el.id} />;
@@ -24,7 +21,9 @@ const Dialogs = (props) => {
     let text = e.target.value;
     props.dispatch(changeMessageCreator(text));
   };
-
+  let dialogs = props.state.dialogsData.map((dialog) => (
+      <DialogItem name={dialog.name} id={dialog.id} />
+  ));
   return (
     <div className={classes.dialogs}>
       <div className={classes.dialogsItems}>{dialogs}</div>
