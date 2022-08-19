@@ -2,8 +2,9 @@ import classes from "./Navbar.module.css";
 import NavFriends from "./NavFriends/NavFriends";
 import { Link, NavLink } from "react-router-dom";
 import React from 'react'
+import {NavFriendsContainer} from "./NavFriends/NavFriendsContainer";
 
-const Navbar = (props) => {
+const Navbar = () => {
   return (
     <nav className={classes.nav}>
       <div className={classes.item}>
@@ -46,7 +47,7 @@ const Navbar = (props) => {
           Настройки
         </NavLink>
       </div>
-      <NavFriends myfriends={props.state.navfriends} />
+      <NavFriendsContainer/>
     </nav>
   );
 };

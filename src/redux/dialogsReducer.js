@@ -10,7 +10,6 @@ const initialState = {
     { id: 4, messages: "Отличная погода сегодня" },
   ],
   NewMessage: "",
-
   dialogsData: [
     { id: 1, name: "Ivan" },
     { id: 2, name: "Igor" },
@@ -20,18 +19,21 @@ const initialState = {
 }
 
 const dialogsReducer = (state = initialState, action) => {
+  debugger
   switch (action.type) {
-    case ADD_MESSAGE:
-      let newMessage = {
-        id: 5,
-        messages: state.NewMessage,
-      };
-      state.messagesData.push(newMessage);
-      state.NewMessage = "";
-      return state;
-    case CHANGE_MESSAGE:
-      state.NewMessage = action.text;
-      return state;
+    case ADD_MESSAGE:{
+      // let newMessage = {id: 5, messages: state.NewMessage};
+      // let copyState = {...state}
+      // copyState.messagesData.push(newMessage)
+      // return copyState
+      return {...state,messagesData:[...state.messagesData,{id: 5, messages: state.NewMessage}]}
+    }
+    case CHANGE_MESSAGE:{
+      let copyState = {...state}
+      copyState.NewMessage = action.text;
+      return copyState;
+    }
+
     default:
       return state;
   }
