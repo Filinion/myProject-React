@@ -22,11 +22,7 @@ const dialogsReducer = (state = initialState, action) => {
   debugger
   switch (action.type) {
     case ADD_MESSAGE:{
-      // let newMessage = {id: 5, messages: state.NewMessage};
-      // let copyState = {...state}
-      // copyState.messagesData.push(newMessage)
-      // return copyState
-      return {...state,messagesData:[...state.messagesData,{id: 5, messages: state.NewMessage}]}
+      return {...state,messagesData:[...state.messagesData,{id: 5, messages: state.NewMessage}],NewMessage:''}
     }
     case CHANGE_MESSAGE:{
       let copyState = {...state}

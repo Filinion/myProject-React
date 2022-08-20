@@ -3,9 +3,9 @@ import MyPosts from "./MyPosts";
 import {addPostActionCreator, changeNewPostCreator} from "../../../redux/profileReducer";
 
 const mapStateToProps = (state) => {
-    debugger
+
     return {
-        myPostData: state.ProfilePage.myPostData
+        ProfilePage: state.ProfilePage
     }
 }
 const mapDispatchToProps = (dispatch) => {

@@ -5,7 +5,7 @@ import {addMessageCreator, changeMessageCreator} from "../../redux/dialogsReduce
 
 const mapStateToProps = (state) => {
     return {
-        state: state.DialogPage
+        DialogPage: state.DialogPage
     }
 }
 const mapDispatchToProps = (dispatch) => {
